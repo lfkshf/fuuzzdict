@@ -1,0 +1,22 @@
+cat *.txt > all1.txt
+split -b 49m big-all.txt
+sort all1.txt|uniq >all.txt
+
+apt install git -y
+ssh-keygen -t ed25519  -C "kfjs111@gmail.com"
+cat my_github_ed25519.pub
+
+git config --global user.name "lfkshf"
+git config --global user.email "kfjs111@gmail.com"
+
+rm -rf .git
+git remote rm origin
+
+
+git init
+git add . 
+git commit -m "first commit"
+git remote add origin git@github.com:lfkshf/fuuzzdict.git
+git push -u origin master
+
+ 
